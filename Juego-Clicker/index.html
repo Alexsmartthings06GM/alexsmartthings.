@@ -1,0 +1,44 @@
+<!--  Código original:                             -->
+<!--  Created by Truzz TruzzBlogg                  -->
+<!--  Youtube Link: https://youtu.be/Ln7c6fF8ltw   -->
+<!--  Modificado por Jose Luis Cebrian Marquez     -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+
+<body>
+ <h1 id="titulo">JUEGO CLICKER</h1>   
+
+
+
+
+    <div class="container">
+        <span id="countdown"></span>        
+        <h2> &#9724; Haz click en la taza &#9724; </h2>
+        
+        <!-- Al hacer click en la imagen, llama a la funcion JS incrementarContador() -->
+        <img id="imagenClick" src="./img/roblox.png" onclick="incrementarContador()">
+        
+        <!-- Aquí mostraré el valor del contador -->
+        <div id="puntos">0</div>
+
+
+
+
+
+        <!-- El botón reset al principio está oculto por estilo, luego el JS lo muestra -->
+        <!-- Al hacer click en el botón, llama a la funcion JS resetearContador() -->
+        <button id="botonReset" style="display: none;" onclick="resetearContador()">Resetear Contador</button>
+    </div>
+
+    <script type="text/javascript" src="./js/codigo.js"></script>
+</body>
+</html>
