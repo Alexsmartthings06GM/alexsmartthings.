@@ -12,16 +12,18 @@ function incrementarContador() {
         document.getElementById("puntos").innerHTML = contador;
         document.getElementById("botonReset").style.display = "block";
     }
+
 }
 
 function resetearContador() {
     // Pongo el contador a 0
     contador = 0;
 
-    // Reinicio la cuenta regresiva y habilito los clics nuevamente
-    segundoInicio = 10;  // Restablezco el valor inicial
-    puedeHacerClick = true;  // Permito nuevamente los clics
-    actualizar();  // Reinicio la cuenta regresiva
+    // Reinicio la cuenta regresiva y habilito los clics nuevamente, después restablezco el valor inicial, luego
+    //permito nuevamente los clicks y por último reinicio la cuenta regresiva.
+    segundoInicio = 10; 
+    puedeHacerClick = true;  
+    actualizar();  
 
     // Actualizo los puntos y oculto botonReset
     document.getElementById("puntos").innerHTML = contador;
@@ -40,8 +42,11 @@ function actualizar() {
         segundoInicio -= 1;
         setTimeout(actualizar, 1000);
     }
+    if (segundoInicio <= 0){
+        alert("El juego ha terminado, hiciste " + contador + " clicks.");
+        resetearContador;
+    }
 }
-
 // Inicia la cuenta regresiva la primera vez
 actualizar();
 
