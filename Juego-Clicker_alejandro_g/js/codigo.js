@@ -1,7 +1,7 @@
 // Defino variable de contador que al principio vale 0
 var contador = 0;
 var segundoInicio = 10;  // Valor inicial de la cuenta regresiva
-var puedeHacerClick = true;  // Variable para habilitar o deshabilitar clics
+var puedeHacerClick = true;  
 
 // CUENTA REGRESIVA
 function actualizar() {
@@ -11,8 +11,8 @@ function actualizar() {
         // Cuenta regresiva ha finalizado
         document.getElementById('countdown').innerHTML = "Contador finalizado";
         puedeHacerClick = false;  // Deshabilito los clics cuando termina la cuenta regresiva
-        alert("El juego ha terminado, hiciste " + contador + " clicks.");
-        resetearContador();  // Llama a la función correctamente
+        alert("Has hecho " + contador + " clicks.");
+        resetearContador(); 
     } else {
         segundoInicio -= 1;
         setTimeout(actualizar, 1000);
@@ -29,10 +29,10 @@ function incrementarContador() {
 }
 
 function resetearContador() {
-    // Pongo el contador a 0
+    // contador a 0
     contador = 0;
 
-    // Reinicio la cuenta regresiva y habilito los clics nuevamente, después restablezco el valor inicial
+    // Reinicio el contador y pongo para hacer clics otra vez
     segundoInicio = 10; 
     puedeHacerClick = true;  
     actualizar();  
