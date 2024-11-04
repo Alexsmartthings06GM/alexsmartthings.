@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<link rel="stylesheet" href="./estilosform.css">
+	</head>
+	<body>
+	<!-- Formulario basico (Ejemplo basado en el de https://www.htmlquick.com/es/tutorials/forms/4.html) -->
+	
+	<!-- USO DEL FORM MONTADO EN XAMPP EN LOCAL (DESCOMENTA ESTA LÍNEA) -->
+	<!--
+	<form action="envio.php" target="_blank" method="POST">
+	-->
+
+	<!-- USO DEL FORM REMOTO DE TESTEO -->
+	<form action="https://formtester.goodbytes.be/post.php" method="post">
+
+		<h1 id="titulo">FORMULARIO DE CONTACTO</h1>
+		<p id="titulo2">Este form se envía a una web de terceros, no introduzcas información personal ni contraseñas.</p>
+		<p id="nombre">Tu nombre: <input type="text" id="idnombre" name="nombre"></p>
+
+		<p id="correo">Tu dirección de correo: <input type="text" id="idcorreo" name="correo"></p>
+
+		<p id="mensaje">Tu mensaje:<br>
+			<textarea id="areatexto" name="mensaje"></textarea>
+		</p>
+		
+		<p id="email">¿Quieres que te contestemos por email?
+		<select id="seleccionar" name="envioEmail">
+			<option value="si">Si
+			<option value="no">No
+		</select>
+		</p>
+		<br>
+		<p id="profesion"> Indica tu profesión:  </p>
+		
+		<input id="profesorc" checked="checked" name="profesion" type="radio" value="profesor" /> Profesor <br /> 
+		<input id="usuarioexternoc" name="profesion" type="radio" value="usuarioexterno" /> Usuario Externo <br />  
+		<input id="alumnoc" name="profesion" type="radio" value="alumno" /> Alumno <br />  
+		<br>
+
+
+		<input id="enviarmensaje" type="submit" value="Enviar mensaje">
+	</form>
+	</body>
+</html>
