@@ -40,6 +40,29 @@
 
 
 		<input id="enviarmensaje" type="submit" value="Enviar mensaje">
+		<button type="button" onclick="sendMail()">Enviar por correo</button>
+
 	</form>
+
+	<script>
+		function sendMail() {
+			const nombre = document.getElementById("idnombre").value;
+			const correo = document.getElementById("idcorreo").value;
+			const mensaje = document.getElementById("areatexto").value;
+			const envioEmail = document.getElementById("seleccionar").value;
+			const profesion = document.querySelector('input[name="profesion"]:checked').value;
+
+			// Crear el cuerpo del mensaje
+			const body = `Hola ${nombre},%0D%0A%0D%0ATu mensaje:%0D%0A${mensaje}%0D%0A%0D%0A` +
+						 `¿Quieres respuesta?: ${envioEmail}%0D%0AProfesión: ${profesion}`;
+
+			// Crear el enlace mailto con los datos del formulario
+			const mailtoLink = `mailto:${correo}?subject=Formulario de Contacto&body=${body}`;
+
+			// Abrir el enlace mailto
+			window.location.href = mailtoLink;
+		}
+	</script>
+	
 	</body>
 </html>
